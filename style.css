@@ -1,5 +1,9 @@
 /* RESET */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* GLOBAL CONNECTED DARK GRADIENT BACKGROUND */
 body {
@@ -25,22 +29,32 @@ body {
     width: 100%;
     z-index: 999;
 }
-.navbar ul { display: flex; list-style: none; gap: 20px; }
-.navbar a { color: white; text-decoration: none; font-weight: bold; }
-.navbar a:hover { color: #bbbbbb; }
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar a:hover {
+    color: #bbbbbb;
+}
 
 /* BANNER */
 .banner {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 160px 20px; /* Increased from 120px to 150px for slightly bigger home section */
+    padding: 160px 20px;
     background: transparent;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .banner-left img {
-    width: 390px; /* Slightly bigger image */
-    height: 560px; /* Slightly taller */
+    width: 390px;
+    height: 560px;
     object-fit: cover;
     object-position: top center;
     border-radius: 10px;
@@ -48,10 +62,10 @@ body {
 }
 .banner-right {
     margin-left: 40px;
-    max-width: 460px; /* Slightly wider */
+    max-width: 460px;
 }
 .banner-right h2 {
-    font-size: 40px; /* Slightly bigger heading */
+    font-size: 40px;
     margin-bottom: 15px;
     color: #fff;
 }
@@ -80,7 +94,12 @@ body {
     background: transparent;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-.info p { margin: 10px auto; max-width: 600px; color: #cccccc; font-size: 18px }
+.info p {
+    margin: 10px auto;
+    max-width: 600px;
+    color: #cccccc;
+    font-size: 18px
+}
 
 /* PRACTICE AREAS */
 .practice {
@@ -89,7 +108,10 @@ body {
     background: transparent;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-.practice h2 { margin-bottom: 40px; color: #fff; }
+.practice h2 {
+    margin-bottom: 40px;
+    color: #fff;
+}
 .practice-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -109,8 +131,13 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
-.practice-item h3 { margin-bottom: 12px; color: #fff; }
-.practice-item p { color: #cccccc; }
+.practice-item h3 {
+    margin-bottom: 12px;
+    color: #fff;
+}
+.practice-item p {
+    color: #cccccc;
+}
 
 /* PAST WORKS */
 .past-works {
@@ -119,7 +146,10 @@ body {
     background: transparent;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-.past-works h2 { color: #fff; margin-bottom: 40px; }
+.past-works h2 {
+    color: #fff;
+    margin-bottom: 40px;
+}
 .works-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -139,8 +169,13 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
-.work-item h3 { margin-bottom: 12px; color: #fff; }
-.work-item p { color: #cccccc; }
+.work-item h3 {
+    margin-bottom: 12px;
+    color: #fff;
+}
+.work-item p {
+    color: #cccccc;
+}
 
 /* TESTIMONIALS */
 .testimonials {
@@ -149,7 +184,11 @@ body {
     background: transparent;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-.testimonials h2 { color: #fff; margin-bottom: 40px; text-align: center; }
+.testimonials h2 {
+    color: #fff;
+    margin-bottom: 40px;
+    text-align: center;
+}
 .testimonial {
     max-width: 600px;
     margin: 25px auto;
@@ -165,8 +204,14 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
-.testimonial h4 { margin-top: 10px; font-weight: bold; color: #fff; }
-.testimonial p { color: #d0d0d0; }
+.testimonial h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+.testimonial p {
+    color: #d0d0d0;
+}
 
 /* FAQ */
 .faq {
@@ -175,7 +220,11 @@ body {
     text-align: center;
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-.faq h2 { margin-bottom: 40px; text-align: center; color: #fff; }
+.faq h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
 .faq-item {
     max-width: 700px;
     margin: 25px auto;
@@ -191,8 +240,13 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
-.faq-item h3 { margin-bottom: 10px; color: #fff; }
-.faq-item p { color: #cccccc; }
+.faq-item h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+.faq-item p {
+    color: #cccccc;
+}
 
 /* CONTACT */
 .contact {
@@ -200,8 +254,188 @@ body {
     text-align: center;
     background: transparent;
 }
-.contact h2 { color: #fff; margin-bottom: 20px; }
-.contact p { margin: 10px 0; color: #cccccc; font-size: 18px; }
+.contact h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.contact p {
+    margin: 10px 0;
+    color: #cccccc;
+    font-size: 18px;
+}
 
 /* SMOOTH SCROLLING */
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
+
+/* HAMBURGER BUTTON STYLES */
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
+
+/* ======================================= */
+/* !!! MOBILE RESPONSIVENESS (<= 600px) !!! */
+/* ======================================= */
+
+@media (max-width: 600px) {
+
+/* --- 1. NAVBAR --- */
+    .navbar {
+        flex-direction: row; /* Keep logo and button horizontal */
+        align-items: center;
+        justify-content: space-between; /* Space out logo and button */
+        padding: 15px 20px;
+    }
+
+    /* SHOW THE HAMBURGER BUTTON ON MOBILE */
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none; /* *** HIDE THE MENU BY DEFAULT *** */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Position below the header/navbar height */
+        left: 0;
+        background: rgba(10, 10, 15, 0.95); /* Dark background for the expanded menu */
+        backdrop-filter: blur(8px);
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* CLASS TO SHOW THE MENU WITH JAVASCRIPT */
+    .navbar ul.active {
+        display: flex; 
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center; /* Center the links */
+        padding: 12px 0; /* Add more vertical space for easier tapping */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .navbar ul li:last-child {
+        border-bottom: none;
+    }
+
+    /* X-ICON ANIMATION */
+    .menu-toggle.active .hamburger {
+        background: transparent;
+    }
+
+    .menu-toggle.active .hamburger::before {
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle.active .hamburger::after {
+        transform: rotate(-45deg);
+    }
+
+    /* --- 2. BANNER / HERO SECTION --- */
+    .banner {
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 120px 20px 40px; /* Adjust top padding to clear the fixed navbar */
+    }
+
+    .banner-left {
+        order: 2; /* Move the image below the text for better flow on mobile */
+        margin-top: 30px;
+    }
+    
+    .banner-right {
+        order: 1; /* Move text above the image */
+        margin-left: 0; /* Remove desktop margin */
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .banner-left img {
+        width: 100%; /* Make image span full width (capped at its max-width) */
+        max-width: 300px; /* Cap max size for very wide phones/smaller tablets */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .banner-right h2 {
+        font-size: 32px; /* Reduce heading size */
+    }
+
+
+    /* --- 3. GRID LAYOUTS (PRACTICE, WORKS) --- */
+    
+    /* Make Practice Area grid single column */
+    .practice-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        max-width: 100%;
+        gap: 20px;
+    }
+    
+    /* Make Past Works grid single column */
+    .works-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    /* --- 4. SECTION PADDING & FONT SIZE --- */
+    section {
+        padding: 40px 15px; /* Reduce padding on sections */
+    }
+    
+    /* Slightly reduce text size for better mobile readability */
+    .info p, 
+    .practice-item p, 
+    .work-item p, 
+    .testimonial p, 
+    .faq-item p, 
+    .contact p {
+        font-size: 16px;
+    }
+    
+    /* Reduce padding for grid items on mobile */
+    .practice-item, 
+    .work-item, 
+    .testimonial, 
+    .faq-item {
+        padding: 20px;
+    }
+
+}
