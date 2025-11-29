@@ -344,7 +344,7 @@ html {
 .heading-underline {
     width: 60px;
     height: 4px;
-    background: linear-gradient(90deg, #FFD700, #FFA500); 
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     border-radius: 2px;
     margin-bottom: 30px;
 }
@@ -358,7 +358,7 @@ html {
 }
 
 .contact-detail i {
-    color: #FFD700; /* Gold color for icons */
+    color: #1e3c72; /* Gold color for icons */
     margin-right: 15px;
     font-size: 22px;
     width: 25px;
@@ -393,7 +393,7 @@ html {
 }
 
 .social-links a:hover {
-    background: linear-gradient(135deg, #FFD700, #FFA500); 
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: #101825; 
     transform: translateY(-3px);
 }
@@ -427,7 +427,7 @@ html {
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
-    border-color: #FFD700;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     background-color: rgba(255,255,255,0.12);
 }
 
@@ -438,7 +438,7 @@ html {
 
 .submit-btn {
     padding: 15px 30px;
-    background: linear-gradient(135deg, #FFD700, #FFA500);
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     color: #101825;
     border: none;
     border-radius: 8px;
@@ -451,9 +451,9 @@ html {
 }
 
 .submit-btn:hover {
-    background: linear-gradient(135deg, #FFA500, #FFC107);
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255,215,0,0.3);
+    box-shadow: 0 5px 15px  #244881;
 }
 
 /* ======================================= */
