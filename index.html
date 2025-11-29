@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lawyer Services</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
@@ -108,10 +109,42 @@
 </section>
 
 <section id="contact" class="contact">
-    <h2>Contact Information</h2>
-    <p>Email: example@email.com</p>
-    <p>Phone: +995 555 123 456</p>
-    <p>Office: Lorem ipsum dolor sit amet</p>
+    <div class="contact-container">
+        <div class="contact-info-column">
+            <h2>Contacts</h2>
+            <div class="heading-underline"></div>
+
+            <div class="contact-detail">
+                <i class="fas fa-phone-alt"></i>
+                <p>+995 555 33 38 00</p>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <p>gmail@gmail.com</p>
+            </div>
+            <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>ბათუმი, საქართველო</p>
+            </div>
+
+            <h3>Social</h3>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/995555333800" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form-column">
+            <form class="contact-form" action="#" method="POST">
+                <input type="text" name="name" placeholder="Name and Last Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="phone" placeholder="Phone Number">
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 </section>
 
 <script src="scrypt.js"></script>

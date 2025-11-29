@@ -14,6 +14,11 @@ body {
     min-height: 100vh;
 }
 
+/* SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth;
+}
+
 /* NAVBAR */
 .navbar {
     display: flex;
@@ -41,6 +46,46 @@ body {
 }
 .navbar a:hover {
     color: #bbbbbb;
+}
+
+/* HAMBURGER BUTTON STYLES */
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
 }
 
 /* BANNER */
@@ -248,108 +293,248 @@ body {
     color: #cccccc;
 }
 
-/* CONTACT */
+/* ======================================= */
+/* CONTACT SECTION (MODIFIED FOR EQUAL WIDTH) */
+/* ======================================= */
 .contact {
     padding: 80px 20px;
-    text-align: center;
     background: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    text-align: left;
 }
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px; /* Space between columns */
+    max-width: 1000px; /* Max width for the content */
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.contact-info-column,
+.contact-form-column {
+    /* GUARANTEED EQUAL WIDTH FIX: */
+    width: calc(50% - 30px); /* 50% minus half the gap */
+    flex: 0 0 calc(50% - 30px); /* Forces the flex basis to the calculated width */
+    min-width: 0; 
+    
+    padding: 25px;
+    background: rgba(0,0,0,0.4); 
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Optional hover effect for columns */
+.contact-info-column:hover,
+.contact-form-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+}
+
+
 .contact h2 {
     color: #fff;
+    margin-bottom: 15px;
+    font-size: 32px; 
+    text-align: left; 
+}
+
+.heading-underline {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #FFA500); 
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    color: #e6e6e6;
+    font-size: 17px;
+}
+
+.contact-detail i {
+    color: #FFD700; /* Gold color for icons */
+    margin-right: 15px;
+    font-size: 22px;
+    width: 25px;
+    text-align: center;
+}
+
+.contact-info-column h3 {
+    color: #fff;
+    margin-top: 40px;
     margin-bottom: 20px;
-}
-.contact p {
-    margin: 10px 0;
-    color: #cccccc;
-    font-size: 18px;
+    font-size: 24px;
 }
 
-/* SMOOTH SCROLLING */
-html {
-    scroll-behavior: smooth;
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* HAMBURGER BUTTON STYLES */
-.menu-toggle {
-    display: none; /* Hidden by default on desktop */
-    background: transparent;
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.1); 
+    border-radius: 50%;
+    color: #e6e6e6;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    background: linear-gradient(135deg, #FFD700, #FFA500); 
+    color: #101825; 
+    transform: translateY(-3px);
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    color: #e6e6e6;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #b0b0b0;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #FFD700;
+    background-color: rgba(255,255,255,0.12);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #101825;
     border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    padding: 10px;
-    z-index: 1000;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    align-self: flex-end;
+    max-width: fit-content;
 }
 
-.hamburger {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
-    position: relative;
-    transition: background 0.3s;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    display: block;
-    width: 30px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
-    position: absolute;
-    transition: transform 0.3s;
-}
-
-.hamburger::before {
-    transform: translateY(-8px);
-}
-
-.hamburger::after {
-    transform: translateY(8px);
+.submit-btn:hover {
+    background: linear-gradient(135deg, #FFA500, #FFC107);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,215,0,0.3);
 }
 
 /* ======================================= */
-/* !!! MOBILE RESPONSIVENESS (<= 600px) !!! */
+/* !!! MOBILE RESPONSIVENESS (<= 600px/768px) !!! */
 /* ======================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    /* Override fixed navbar position when menu is active for better scrolling */
+    .navbar ul.active {
+        top: 60px; 
+    }
+    
+    /* --- 1. CONTACT SECTION MOBILE FIX --- */
+    .contact-container {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 40px;
+    }
 
-/* --- 1. NAVBAR --- */
+    .contact-info-column,
+    .contact-form-column {
+        /* Override fixed width on mobile */
+        width: 100%; 
+        flex: 0 0 100%;
+        padding: 20px;
+        box-sizing: border-box; 
+    }
+
+    .contact h2,
+    .contact-info-column h3 {
+        text-align: center; /* Center headings on mobile */
+    }
+
+    .heading-underline {
+        margin: 0 auto 30px auto; /* Center the underline */
+    }
+
+    .contact-detail {
+        justify-content: center; /* Center contact details on mobile */
+    }
+
+    .social-links {
+        justify-content: center; /* Center social links on mobile */
+    }
+
+    .submit-btn {
+        align-self: center; /* Center the submit button on mobile */
+    }
+
+    /* --- 2. GLOBAL MOBILE STYLES (FROM ORIGINAL CODE) --- */
     .navbar {
-        flex-direction: row; /* Keep logo and button horizontal */
+        flex-direction: row; 
         align-items: center;
-        justify-content: space-between; /* Space out logo and button */
+        justify-content: space-between; 
         padding: 15px 20px;
     }
 
-    /* SHOW THE HAMBURGER BUTTON ON MOBILE */
     .menu-toggle {
         display: block;
     }
 
     .navbar ul {
-        display: none; /* *** HIDE THE MENU BY DEFAULT *** */
+        display: none; 
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 60px; /* Position below the header/navbar height */
+        top: 60px; 
         left: 0;
-        background: rgba(10, 10, 15, 0.95); /* Dark background for the expanded menu */
+        background: rgba(10, 10, 15, 0.95); 
         backdrop-filter: blur(8px);
         padding: 10px 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* CLASS TO SHOW THE MENU WITH JAVASCRIPT */
     .navbar ul.active {
         display: flex; 
     }
 
     .navbar ul li {
         width: 100%;
-        text-align: center; /* Center the links */
-        padding: 12px 0; /* Add more vertical space for easier tapping */
+        text-align: center; 
+        padding: 12px 0; 
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
     
@@ -357,7 +542,6 @@ html {
         border-bottom: none;
     }
 
-    /* X-ICON ANIMATION */
     .menu-toggle.active .hamburger {
         background: transparent;
     }
@@ -370,57 +554,44 @@ html {
         transform: rotate(-45deg);
     }
 
-    /* --- 2. BANNER / HERO SECTION --- */
     .banner {
-        flex-direction: column; /* Stack image and text vertically */
-        padding: 120px 20px 40px; /* Adjust top padding to clear the fixed navbar */
+        flex-direction: column; 
+        padding: 120px 20px 40px;
     }
 
     .banner-left {
-        order: 2; /* Move the image below the text for better flow on mobile */
+        order: 2; 
         margin-top: 30px;
     }
     
     .banner-right {
-        order: 1; /* Move text above the image */
-        margin-left: 0; /* Remove desktop margin */
+        order: 1; 
+        margin-left: 0; 
         max-width: 100%;
         text-align: center;
     }
     
     .banner-left img {
-        width: 100%; /* Make image span full width (capped at its max-width) */
-        max-width: 300px; /* Cap max size for very wide phones/smaller tablets */
-        height: auto; /* Adjust height automatically */
+        width: 100%; 
+        max-width: 300px;
+        height: auto; 
     }
 
     .banner-right h2 {
-        font-size: 32px; /* Reduce heading size */
+        font-size: 32px; 
     }
 
-
-    /* --- 3. GRID LAYOUTS (PRACTICE, WORKS) --- */
-    
-    /* Make Practice Area grid single column */
-    .practice-grid {
-        grid-template-columns: 1fr; /* Single column layout */
-        max-width: 100%;
-        gap: 20px;
-    }
-    
-    /* Make Past Works grid single column */
+    .practice-grid,
     .works-grid {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
         max-width: 100%;
         gap: 20px;
     }
 
-    /* --- 4. SECTION PADDING & FONT SIZE --- */
     section {
-        padding: 40px 15px; /* Reduce padding on sections */
+        padding: 40px 15px; 
     }
     
-    /* Slightly reduce text size for better mobile readability */
     .info p, 
     .practice-item p, 
     .work-item p, 
@@ -430,12 +601,10 @@ html {
         font-size: 16px;
     }
     
-    /* Reduce padding for grid items on mobile */
     .practice-item, 
     .work-item, 
     .testimonial, 
     .faq-item {
         padding: 20px;
     }
-
 }
